@@ -1,0 +1,54 @@
+:root {
+    --white: #fff;
+    --brown: #d26e4b;
+    --gray: #f4f4f4;
+    --black: #000;
+    --border-color: #dcdcdc;
+    --text-color: #444;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.section {
+    padding-top: 8rem;
+}
+
+.app-btn {
+    color: #282d3b;
+    background-color: #fff;
+    border-color: #fff #fff #fff;
+    border-style: solid;
+    font-weight: bold;
+    letter-spacing: 0.2em;
+    padding: 1.25rem 3.1rem;
+    text-transform: uppercase;
+}
+
+.app-btn.outline {
+    border-color: #282d3b;
+    background-color: transparent;
+    border-width: 0.01rem;
+}

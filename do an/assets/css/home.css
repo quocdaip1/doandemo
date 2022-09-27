@@ -1,0 +1,232 @@
+#banner {
+    width: 100%;
+    height: 100vh;
+}
+
+#banner .carousel.slide {
+    width: 100%;
+    height: 100%;
+}
+
+#banner .carousel.slide .carousel-inner {
+    width: 100%;
+    height: 100%;
+    ;
+}
+
+#banner .carousel.slide .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+
+#banner .carousel.slide .carousel-item img {
+    height: 100%;
+}
+
+#banner .carousel-caption.caption-left {
+    left: 10%;
+    top: 40%;
+    text-align: left;
+
+}
+
+#banner .carousel-caption.caption-right {
+    right: 10%;
+    left: unset;
+    top: 40%;
+    text-align: left;
+}
+
+#banner .banner__caption h5 {
+    font-size: 2.6rem;
+    margin-bottom: 5px;
+}
+
+#banner .banner__caption .banner__caption--text {
+    font-size: 6rem;
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+#banner .banner__caption .banner__caption--text p {
+    margin: 0;
+}
+
+#banner .banner__caption .banner__caption--action button {
+    margin-left: 30px;
+}
+
+#banner .banner__caption .banner__caption--action p {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+
+#banner .banner__caption .banner__caption--action p span {
+    color: var(--brown);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#banner .carousel-indicators {
+    justify-content: flex-end;
+    padding-bottom: 5rem;
+}
+
+#banner .banner__carousel--action {
+    width: 12.5rem;
+    height: 7rem;
+    background: unset;
+    border: .2rem solid var(--white);
+    background-image: url('../images/slide-1-thumb.jpg');
+    background-position: center;
+    background-size: cover;
+    padding: 1rem;
+}
+
+#banner .banner__carousel--action:nth-child(2) {
+    background: unset;
+    border: .2rem solid var(--white);
+    background-image: url('../images/slide-2-thumb.jpg');
+    background-position: top;
+}
+
+/* end banner */
+
+/* products */
+
+#products {
+    background: var(--gray);
+}
+
+#products .products__filter {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    padding: 0 0 2rem 0;
+}
+
+#products .products__filter h4 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+#products .products__filter .products__filter--categories {}
+
+#products .products__filter .products__filter--categories li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+#products .filter-section {
+    border-right: .1rem solid var(--border-color);
+}
+
+#products .products__filter .products__filter--categories li .check-btn {
+    width: 3rem;
+    height: 3rem;
+    border: .1rem solid var(--black);
+    margin-right: 1rem;
+}
+
+#products .products__list .products__list--product {
+    width: calc(100% / 5 - 1rem);
+    margin-bottom: 1rem;
+}
+
+#products .products__list .products__list--product .product__image {
+    position: relative;
+}
+
+#products .products__list .products__list--product:hover .product__image--view {
+    opacity: 1;
+    visibility: visible;
+}
+
+#products .products__list .products__list--product:hover .product__image--cart {
+    opacity: 1;
+    visibility: visible;
+}
+
+.products__list--product .product__image .product__image--cart {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.products__list--product .product__image .product__image--view {
+    background: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1rem 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.products__list--product .product__image .product__image--view p {
+    margin: 0;
+}
+
+#products .products__list .products__list--product .product__content {
+    margin-top: 1rem;
+}
+
+#products .products__list .products__list--product .product__content .name {
+    font-size: 1.4rem;
+
+}
+
+#products .products__list .products__list--product .product__content .star {
+    color: var(--text-color);
+}
+
+#products .products__list .products__list--product .product__content .price {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--text-color);
+}
+
+#products .product__content .product__content--category a {
+    color: inherit;
+    opacity: 0.8;
+}
+
+
+#products .btn-wrapper {
+    margin: 8rem 0;
+    text-align: center;
+}
+
+
+#main-product {
+    background: #111;
+    padding: 8rem 0;
+}
+
+#main-product .main-product__wrapper {
+    position: relative;
+}
+
+
+#main-product .main-product__content {
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+
+/* end products */
