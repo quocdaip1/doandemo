@@ -114,6 +114,10 @@
 
 #products .products__filter .products__filter--categories {}
 
+#products .products__filter .products__filter--categories .category.active .check-btn {
+    background: black;
+}
+
 #products .products__filter .products__filter--categories li {
     font-size: 1.2rem;
     margin-bottom: 1rem;
@@ -130,21 +134,21 @@
     margin-right: 1rem;
 }
 
-#products .products__list .products__list--product {
+.products__list .products__list--product {
     width: calc(100% / 5 - 1rem);
     margin-bottom: 1rem;
 }
 
-#products .products__list .products__list--product .product__image {
+.products__list .products__list--product .product__image {
     position: relative;
 }
 
-#products .products__list .products__list--product:hover .product__image--view {
+.products__list .products__list--product:hover .product__image--view {
     opacity: 1;
     visibility: visible;
 }
 
-#products .products__list .products__list--product:hover .product__image--cart {
+.products__list .products__list--product:hover .product__image--cart {
     opacity: 1;
     visibility: visible;
 }
@@ -230,3 +234,89 @@
 }
 
 /* end products */
+
+/* featured-products */
+
+#featured-products {
+    padding: 10rem 0;
+    background: var(--gray);
+}
+
+.products__list.featured-product-list {
+    position: relative;
+}
+
+.products__list.featured-product-list .products__list--product {
+    padding: 0 1rem;
+}
+
+.products__list.featured-product-list:hover .slick-arrow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.products__list.featured-product-list .slick-arrow {
+    position: absolute;
+    top: 30%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: .4s;
+}
+
+.products__list.featured-product-list .slick-arrow.slick-prev {
+    left: -50px;
+}
+
+.products__list.featured-product-list .slick-arrow.slick-next {
+    right: -50px;
+}
+
+
+
+/* end feature products */
+
+
+/* explore */
+
+#explore {
+    background-image: url('../images/explore-bg.jpg');
+    min-height: 20rem;
+    padding: 15rem 0;
+}
+
+.explore-wrapper h2 {
+    font-size: 4rem;
+}
+
+/* end explore */
+
+/* services */
+#services {
+    background: var(--black);
+    padding: 7rem 0;
+}
+
+.service__icon {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+}
+
+#services h3 {
+    font-size: 2.5rem;
+}
+
+#services h4 {
+    font-size: 1.2rem;
+}
+
+#services p {
+    margin-top: 2rem;
+    font-size: 1rem;
+    color: var(--help-text-color);
+}
+
+/* end services */

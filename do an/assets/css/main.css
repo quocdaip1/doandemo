@@ -5,6 +5,7 @@
     --black: #000;
     --border-color: #dcdcdc;
     --text-color: #444;
+    --help-text-color: #777;
 }
 
 * {
@@ -39,16 +40,28 @@ img {
 .app-btn {
     color: #282d3b;
     background-color: #fff;
-    border-color: #fff #fff #fff;
-    border-style: solid;
     font-weight: bold;
     letter-spacing: 0.2em;
     padding: 1.25rem 3.1rem;
     text-transform: uppercase;
+    border: none;
+}
+
+.app-btn.secondary {
+    background: #222529;
+    color: var(--white);
 }
 
 .app-btn.outline {
-    border-color: #282d3b;
+    border: .1rem solid #282d3b;
     background-color: transparent;
     border-width: 0.01rem;
+}
+
+.app-input {
+    height: 100%;
+    display: block;
+    padding: 1.25rem 3.1rem;
+    outline: none;
+    border: none;
 }
