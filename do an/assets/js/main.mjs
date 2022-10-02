@@ -1,6 +1,22 @@
+import { addToCart } from "./cart.js";
 import { API_URL, GET_DATA } from "./utils.js";
 
-// lay data categories 
+// lay data categories
+
+
+
+function buildProductsElements(products) {
+    // get product
+    const productList = document.querySelector('.products__list');
+    productList.innerText = '';
+    products.forEach((product) => {
+        // build product element
+        const productElement = buildProductElement(product);
+        productList.appendChild(productElement);
+    })
+
+}
+
 
 function buildFitterItem(category) {
     const filterItemTemplate = document.querySelector('#filterCategoryTemplate');
@@ -12,13 +28,20 @@ function buildFitterItem(category) {
 
     const filterItemCheckBtn = filterItemElement.querySelector('.check-btn');
 
-    filterItemElement.addEventListener('click', function () {
+    filterItemElement.addEventListener('click', async function () {
         const categoriesElement = document.querySelectorAll('.category');
         categoriesElement.forEach(function (categoryElement) {
             categoryElement.classList.remove('active');
         })
-
+        
         filterItemElement.classList.add('active');
+        let api = `${API_URL}/products`;
+        if(category.id){
+            api = `${API_URL}/products?category=${category.id}`;
+        }
+
+        const products = await GET_DATA(api);
+        buildProductsElements(products);
     })
 
     return filterItemElement
@@ -30,6 +53,8 @@ function buildProductElement(product) {
     const productElementFragment = productElementTemplate.content.cloneNode(true);
     const productElement = productElementFragment.querySelector('.products__list--product');
 
+
+    
     const productName = productElement.querySelector('.name');
     productName.innerText = product.productName;
 
@@ -39,31 +64,32 @@ function buildProductElement(product) {
     const productPrice = productElement.querySelector('.price');
     productPrice.innerText = product.price;
 
-    return productElement
+    const btnaddCart = productElement.querySelector('.product__image--cart');
+    btnaddCart.style.cursor = "pointer";
+    btnaddCart.addEventListener('click', function(){
+        addToCart(product);
+    })
+
+    return productElement;
 }
 
 
 async function init() {
     // call api get category
     const filterItemWrapper = document.querySelector('.products__filter--categories');
+    const allCategrory = {
+        id: null,
+        name: 'ALL'
+    }
 
     const categories = await GET_DATA(`${API_URL}/categories`);
-
+    categories.unshift(allCategrory);
     categories.forEach(category => {
         const fitlerElement = buildFitterItem(category);
         filterItemWrapper.appendChild(fitlerElement);
     });
 
-    // get products
-    const productList = document.querySelector('.products__list');
-    const products = await GET_DATA(`${API_URL}/products`);
-
-    products.forEach((product) => {
-        // build product element
-        const productElement = buildProductElement(product);
-        productList.appendChild(productElement);
-    })
-
+   buildProductsElements();
 }
 
 init();

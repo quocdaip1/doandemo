@@ -93,82 +93,28 @@
                     <i class="fa-solid fa-xmark"></i>
                 </div>
                 <!-- this element has bg white -->
-
+                    <template id="productCartTemplate">
+                        <div class="cart-product d-flex justify-content-between">
+                            <div class="cart-product__content">
+                                <h4>
+                                    <a href="">Ultimate 3D Bluetooth Speaker</a>
+                                </h4>
+                                <p>
+                                    <span class="quantity">1</span>
+                                    x
+                                    <span class="price">$99.00</span>
+                                </p>
+                            </div>
+                            <div class="cart-product__image">
+                                <img src="assets/images/product-1.jpg" alt="">
+                                <div class="cart-product__remove-btn">
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
                 <h3>Shopping Cart</h3>
-
                 <div class="cart-products">
-                    <div class="cart-product d-flex justify-content-between">
-                        <div class="cart-product__content">
-                            <h4>
-                                <a href="">Ultimate 3D Bluetooth Speaker</a>
-                            </h4>
-                            <p>
-                                <span class="quantity">1</span>
-                                x
-                                <span class="price">$99.00</span>
-                            </p>
-                        </div>
-                        <div class="cart-product__image">
-                            <img src="assets/images/product-1.jpg" alt="">
-                            <div class="cart-product__remove-btn">
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-product d-flex justify-content-between">
-                        <div class="cart-product__content">
-                            <h4>
-                                <a href="">Ultimate 3D Bluetooth Speaker</a>
-                            </h4>
-                            <p>
-                                <span class="quantity">1</span>
-                                x
-                                <span class="price">$99.00</span>
-                            </p>
-                        </div>
-                        <div class="cart-product__image">
-                            <img src="assets/images/product-1.jpg" alt="">
-                            <div class="cart-product__remove-btn">
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-product d-flex justify-content-between">
-                        <div class="cart-product__content">
-                            <h4>
-                                <a href="">Ultimate 3D Bluetooth Speaker</a>
-                            </h4>
-                            <p>
-                                <span class="quantity">1</span>
-                                x
-                                <span class="price">$99.00</span>
-                            </p>
-                        </div>
-                        <div class="cart-product__image">
-                            <img src="assets/images/product-1.jpg" alt="">
-                            <div class="cart-product__remove-btn">
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="cart-product d-flex justify-content-between">
-                        <div class="cart-product__content">
-                            <h4>
-                                <a href="">Ultimate 3D Bluetooth Speaker</a>
-                            </h4>
-                            <p>
-                                <span class="quantity">1</span>
-                                x
-                                <span class="price">$99.00</span>
-                            </p>
-                        </div>
-                        <div class="cart-product__image">
-                            <img src="assets/images/product-1.jpg" alt="">
-                            <div class="cart-product__remove-btn">
-                                <i class="fa-solid fa-xmark"></i>
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="cart-total d-flex justify-content-between fw-bold text-dark">
@@ -628,7 +574,8 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="assets/js/slider.js"></script>
     <script src="assets/js/header.js"></script>
-    <script type="module" src="assets/js/main.mjs"></script>t
+    <script type="module" src="assets/js/main.mjs"></script>
+    <script src="./assets/js/cart.js"></script>
 </body>
 
 </html>
